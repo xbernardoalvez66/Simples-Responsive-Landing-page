@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#left{
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.menu-item{
+    color: black;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+
+.menu-item:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.fa-arrow-right {
+    transform: rotate(180deg);
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.left-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-text h1{
+    font-size: 70px;
+}
+
+.left-text p{
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.left-text a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+.left-text a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-bottom: -5px;
+}
+
+
+#right{
+    width: 60%;
+    height: 100%;
+    position: relative;
+    background-color: salmon;
+}
+
+
+.right-top{
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.right-top-left{
+    width: 50%;
+    height: 100%;
+    background-image: url('images/01.jpg');
+    background-size: cover;
+    background-position: 0% 70%;
+}
+
+.right-top-right{
+    width: 50%;
+    height: 100%;
+   background-image: url('images/02.jpg');
+   background-size: cover;
+   background-position: 0% 70%;
+}
+
+.right-bottom{
+    width: 100%;
+    height: 50%;
+    background-image: url('images/03.jpg');
+    background-size: cover;
+    background-position: 0% 80%;
+
+}
+
+#overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.276);
+}
+
+/*Responsive*/
+
+@media screen and (max-width:500px) {
+    #main{
+        flex-direction: column;
+    }
+
+    #left{
+        width: 100%;
+    }
+
+    #right{
+        width: 100%;
+    }
+}
